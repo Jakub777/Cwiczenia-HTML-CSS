@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: grey;
+            border: 1px solid black;
+        }
+        .kwadrat {
+            width: 150px;
+            height: 150px;
+        }
+        p {
+            width: 150px;
+            display: inline-block;
+        }
+        div{
+            display: inline-block;
+        }
+        #red{
+            background-color: red;
+        }
+        #gre{
+            background-color: green;
+        }
+        #blu{
+            background-color: blue;
+            clear: right;
+        }
+        h1, p{
+            display: block;
+            clear: left;
+        }
+        h1 ~ p {
+            color: greenyellow;
+        }
+        table {
+            font-size: 800%;
+            /* border-spacing: 50px 20px; */
+            /* border-collapse:separate; */
+        }
+        #stopka {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="red" class="kwadrat"></div>
+    <div id="gre" class="kwadrat"></div>
+    <div id="blu" class="kwadrat"></div>
+    <h1>Tytul</h1>
+    <p>pierwszy</p>
+    <p>drugi</p>
+    <del>cos przekreslonego</del>
+    <p>trzeci</p>
+    <h2>inny tytul</h2>
+    <p>czwarty</p>
+    <div><p>cztery i pol</p></div>
+    <p>piąty</p>
+    <div>
+        <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+    </div>
+    <div id="stopka">Stopka</div>
+</body>
+</html>
