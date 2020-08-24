@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * {
+            border: 3px dotted red;
+        } */
+        form div, form p{
+            display: inline-block;
+        }
+        div.tekstDoPrawej {
+            text-align: right;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Kalkulator czasu przesyłu danych</legend>
+        <form>
+            <div class="tekstDoPrawej">
+                <label for="rozmiar-liczba">Wpisz rozmiar pliku: </label>
+            </div><input id="uf1" name="rozmiar-liczba" type="number">
+            <div>
+                <select id="uf2">
+                    <option value="kB">kB (kilobajt)</option>
+                    <option value="mB">mB (megabajt)</option>
+                    <option value="gB">gB (gigabajt)</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="tekstDoPrawej">
+                <label for="rozmiar-liczba">Wpisz prędkość transferu: </label>
+            </div><input id="us1" name="rozmiar-liczba" type="number">
+            <select id="us2">
+                <option value="kb">kb/s (kilobit/s)</option>
+                <option value="mb">mb/s (megabit/s)</option>
+                <option value="gb">gb/s (gigabit/s)</option>
+                <option value="kB">kB/s (kilobajt/s)</option>
+                <option value="mB">mB/s (megabajt/s)</option>
+                <option value="gB">gB/s (gigabajt/s)</option>
+            </select>
+            
+            <br>
+
+            <div class="tekstDoPrawej">
+                <label for="rozmiar-liczba">Wynik: </label>
+            </div>
+            <p id="wynik"> tekst</p>
+            <br>
+            
+            <div id="guzik" class="tekstDoPrawej">
+                <input name="przeslij" value="policz" type="button">
+            </div>
+
+
+        </form>
+    </fieldset>
+    <script src="cw6.js">
+        
+    </script>
+</body>
+</html>
