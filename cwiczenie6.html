@@ -5,62 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* * {
-            border: 3px dotted red;
-        } */
-        form div, form p{
+        * {
+            /* border: 1px dotted red; */
+            font-size: 120%;
+        }
+        #form1 {
+            margin-left: auto;
+            margin-right: auto;
+            width: 85%;
+            border: 5px dashed #224563;
+        }
+        form div, form p, div p{
             display: inline-block;
         }
         div.tekstDoPrawej {
             text-align: right;
-            width: 200px;
+            width: 40%;
+        }
+        #wynik{
+            display: inline-block;
+            text-align: left;
+            width: 30%;
+        }
+        .input{
+            font-size: 35px;
+            width: 300px;
+        }
+        .short{
+            min-width: 10%;
+            width: 100px;
         }
     </style>
 </head>
 <body>
-    <fieldset>
-        <legend>Kalkulator czasu przesyłu danych</legend>
-        <form>
-            <div class="tekstDoPrawej">
-                <label for="rozmiar-liczba">Wpisz rozmiar pliku: </label>
-            </div><input id="uf1" name="rozmiar-liczba" type="number">
-            <div>
-                <select id="uf2">
-                    <option value="kB">kB (kilobajt)</option>
-                    <option value="mB">mB (megabajt)</option>
-                    <option value="gB">gB (gigabajt)</option>
+    <br><br><br><br>
+        <fieldset id="form1">
+            <legend>Kalkulator czasu przesyłu danych</legend>
+            <form>
+                <div class="tekstDoPrawej">
+                    <label for="rozmiar-liczba">Wpisz rozmiar pliku: </label>
+                </div><input id="uf1" name="rozmiar-liczba" type="number" class="input short">
+                <div>
+                    <select id="uf2" class="input">
+                        <option value="kB">kB (kilobajt)</option>
+                        <option value="mB">mB (megabajt)</option>
+                        <option value="gB">gB (gigabajt)</option>
+                    </select>
+                </div>
+        
+                <br>
+        
+                <div class="tekstDoPrawej">
+                    <label for="rozmiar-liczba">Wpisz prędkość transferu: </label>
+                </div><input id="us1" name="rozmiar-liczba" type="number" class="input short">
+                <select id="us2" class="input">
+                    <option value="kb">kb/s (kilobit/s)</option>
+                    <option value="mb">mb/s (megabit/s)</option>
+                    <option value="gb">gb/s (gigabit/s)</option>
+                    <option value="kB">kB/s (kilobajt/s)</option>
+                    <option value="mB">mB/s (megabajt/s)</option>
+                    <option value="gB">gB/s (gigabajt/s)</option>
                 </select>
-            </div>
+                
+                <br>
+        
+                <div class="tekstDoPrawej">
+                    <p>Wynik: </p>
+                </div>
+                <p id="wynik">&nbsp</p>
+                <br>
+                
+                <div id="guzik" class="tekstDoPrawej">
+                    <input name="przeslij" value="oblicz" type="button">
+                    
+                </div>
+                <br>&nbsp
+        
+            </form>
+        </fieldset>
 
-            <br>
-
-            <div class="tekstDoPrawej">
-                <label for="rozmiar-liczba">Wpisz prędkość transferu: </label>
-            </div><input id="us1" name="rozmiar-liczba" type="number">
-            <select id="us2">
-                <option value="kb">kb/s (kilobit/s)</option>
-                <option value="mb">mb/s (megabit/s)</option>
-                <option value="gb">gb/s (gigabit/s)</option>
-                <option value="kB">kB/s (kilobajt/s)</option>
-                <option value="mB">mB/s (megabajt/s)</option>
-                <option value="gB">gB/s (gigabajt/s)</option>
-            </select>
-            
-            <br>
-
-            <div class="tekstDoPrawej">
-                <label for="rozmiar-liczba">Wynik: </label>
-            </div>
-            <p id="wynik"> tekst</p>
-            <br>
-            
-            <div id="guzik" class="tekstDoPrawej">
-                <input name="przeslij" value="policz" type="button">
-            </div>
-
-
-        </form>
-    </fieldset>
+        <button onclick="alert('Hello')">Click me.</button>
     <script src="cw6.js">
         
     </script>
