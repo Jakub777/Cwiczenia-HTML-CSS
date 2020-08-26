@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .litera{
+            font-family: 'Courier New', Courier, monospace;
+            border: 2px dotted gray;
+            line-height: 200%;
+            font-size: 200%;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-left: 10px;
+            
+        }
+        .litera:hover {
+            background-color: #fa393967;
+            color: red;
+            border: 2px dashed red;        }
+    </style>
+</head>
+<body>
+    <div id="klawiatura">
+    </div>
+</body>
+<script type="text/javascript">
+
+    var klawDiv = document.getElementById("klawiatura")
+
+    class Litera {
+        constructor (arg1) {
+            this.wartosc = arg1
+        }
+        wstawDoKodu() {
+            if (this.wartosc == '<br>') {
+                return this.wartosc
+            }
+            else {
+                return `<span id="${this.wartosc}" class="litera">${this.wartosc}</span>`
+            }
+        }
+
+    }
+    let alfabet = ['q','w','e','r','t','y','u','i','o','p','<br>',
+               'a','s','d','f','g','h','j','k','l','<br>',
+               'z','x','c','v','b','n','m'];
+    for (i=0; i<alfabet.length; i++) {
+        alfabet[i] = new Litera (`${alfabet[i]}`);
+        klawDiv.innerHTML += alfabet[i].wstawDoKodu()
+
+    }
+</script>
+</html>
